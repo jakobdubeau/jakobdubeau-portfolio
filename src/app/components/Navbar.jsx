@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import NavLink from './NavLink'
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
         <Link href={"/"} className="text-5xl text-white font-semibold">
           Logo
         </Link>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu block md:w-auto" id="navbar">
           <ul>
             <li>
                 <Link 
