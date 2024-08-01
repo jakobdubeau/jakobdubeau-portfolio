@@ -27,7 +27,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE]  text-base sm:text-lg mb-6 lg:text-xl">
-            Hi, I'm Jakob. I'm a third year student currently studying computer science at the University of Ottawa.
+            Hi, I'm Jakob. I'm a third year student studying computer science at the University of Ottawa.
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-200 via-indigo-400 to-indigo-700 hover:bg-slate-200 text-white">
