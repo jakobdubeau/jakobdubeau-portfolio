@@ -57,7 +57,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base lg:text-lg">
-          I am a very passionate computer science major that loves everything to do with computers. Recently I've been exploring software engineering with an interest in game development. I'm always looking for new ways to hone my skills and learn new concepts!
+          I'm a very passionate computer science major that loves everything to do with computers. Recently I've been interested in software engineering with a focus in game development. I'm always trying to hone my skills and learn new concepts!
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
