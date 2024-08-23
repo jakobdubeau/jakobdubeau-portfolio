@@ -31,33 +31,6 @@ const projectsData = [
         gitUrl: "/",
         previewUrl: "/",
     },
-    {
-        id: 4,
-        title: "Title",
-        description: "Project description",
-        image: "",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 5,
-        title: "Title",
-        description: "Project description",
-        image: "",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 6,
-        title: "Title",
-        description: "Project description",
-        image: "",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
 ]
 
 const ProjectsSection = () => {

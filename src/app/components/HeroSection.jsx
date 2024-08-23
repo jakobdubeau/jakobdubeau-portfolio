@@ -4,11 +4,11 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
+        <div className="col-span-8 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-indigo-300 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 via-secondary-300 to-tertiary-500">
                 Hello, I'm{" "}
             </span>
             <br></br>
@@ -30,10 +30,10 @@ const HeroSection = () => {
             Hi, I'm Jakob. I'm a third year student studying computer science at the University of Ottawa.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-200 via-indigo-400 to-indigo-700 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-200 text-white">
                 Github
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-200 via-indigo-400 to-indigo-700 hover:bg-slate-800 text-white mt-3">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-800 text-white mt-3">
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                     Download Resume
                 </span>
