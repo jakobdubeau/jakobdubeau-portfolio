@@ -22,8 +22,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Trent University, specialization in Software Engineering</li>
-        <li>University of Ottawa</li>
+        <li>uOttawa, Honours BSc Computer Science</li>
       </ul>
     ),
   },
@@ -57,7 +56,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base lg:text-lg">
-          I'm a very passionate computer science major that loves everything to do with computers. Recently I've been interested in software engineering with a focus in game development. I'm always trying to hone my skills and learn new concepts!
+          I'm a passionate computer science major that loves everything to do with computers. Recently I've been interested in software engineering with a focus on game development. I'm always trying to hone my skills and learn new concepts!
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
