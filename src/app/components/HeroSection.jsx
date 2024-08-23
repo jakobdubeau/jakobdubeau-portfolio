@@ -16,7 +16,7 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 via-secondary-300 to-tertiary-500">
-                Hello, I'm{" "}
+                Hello, I&apos;m{" "}
             </span>
             <br></br>
             <TypeAnimation
@@ -34,7 +34,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE]  text-base sm:text-lg mb-6 lg:text-xl">
-            Hi, I'm Jakob. I'm a third year student studying computer science at the University of Ottawa.
+            Hi, I&apos;m Jakob. I&apos;m a third year student studying computer science at the University of Ottawa.
           </p>
           <div>
           <Link href="https://github.com/jakobdubeau">

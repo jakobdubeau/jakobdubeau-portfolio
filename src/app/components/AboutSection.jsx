@@ -50,13 +50,13 @@ const AboutSection = () => {
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/giphy.gif" width={575} height={575} />
+        <Image src="/images/giphy.gif" alt="snowy" width={575} height={575} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">
             About Me
           </h2>
           <p className="text-base lg:text-lg">
-          I'm a passionate computer science major that loves everything to do with computers. Recently I've been interested in software engineering with a focus on game development. I'm always trying to hone my skills and learn new concepts!
+          I&apos;m a passionate computer science major that loves everything to do with computers. Recently I&apos;ve been interested in software engineering with a focus on game development. I&apos;m always trying to hone my skills and learn new concepts!
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
