@@ -9,6 +9,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>Object Oriented Programming</li>
         <li>Data Structures & Algorithims</li>
         <li>C#</li>
         <li>Java</li>
@@ -56,7 +57,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-base lg:text-lg">
-          I&apos;m a passionate computer science major that loves everything to do with computers. Recently I&apos;ve been interested in software engineering with a focus on game development. I&apos;m always trying to hone my skills and learn new concepts!
+          I&apos;m a passionate computer science major that loves everything to do with computers. Recently I&apos;ve been into software engineering with an interest in game development. I&apos;m always trying to hone my skills and learn new concepts!
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
