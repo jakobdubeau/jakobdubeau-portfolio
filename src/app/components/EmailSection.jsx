@@ -23,7 +23,7 @@ const EmailSection = () => {
       const options = {
         // The method is POST because we are sending data.
         method: 'POST',
-        // Tell tge server we're sending JSON.
+        // Tell the server we're sending JSON.
         headers: {
           'Content-Type': 'application/json',
         },
@@ -52,10 +52,10 @@ const EmailSection = () => {
         Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
     </p>
     <div className="socials flex flex-row gap-2">
-        <Link href="https://github.com/jakobdubeau">
+        <Link href="https://github.com/jakobdubeau" target="_blank" rel="noopener noreferrer">
           <Image src={GithubIcon} alt="Github Icon" />
         </Link>
-        <Link href="https://www.linkedin.com/in/jakobdubeau/">
+        <Link href="https://www.linkedin.com/in/jakobdubeau/" target="_blank" rel="noopener noreferrer">
           <Image src={LinkedinIcon} alt="Linkedin Icon" />
         </Link>
     </div>

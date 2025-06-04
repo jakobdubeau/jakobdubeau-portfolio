@@ -37,12 +37,12 @@ const HeroSection = () => {
             Hi, I&apos;m Jakob. I&apos;m a third year student studying computer science at the University of Ottawa.
           </p>
           <div>
-          <Link href="https://github.com/jakobdubeau">
+          <Link href="https://github.com/jakobdubeau" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-200 text-white">
                 Github
             </button>
           </Link>
-          <Link href="https://drive.google.com/file/d/16vLkoEl4Q9YjRlV9tIs6OTDPUlBTa4Bk/view?usp=sharing">
+          <Link href="images/F25_Resume.pdf" target="_blank" rel="noopener noreferrer">
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-800 text-white mt-3">
                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                     Download Resume
