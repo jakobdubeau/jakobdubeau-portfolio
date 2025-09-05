@@ -40,13 +40,13 @@ const HeroSection = () => {
           </p>
           <div>
           <Link href="https://github.com/jakobdubeau" target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:from-primary-100 hover:via-secondary-300 hover:to-tertiary-600 text-white transition-all duration-300 hover:brightness-105 hover:saturate-110 hover:drop-shadow-[0_0_15px_rgba(139,92,246,0.35)]">
                 Github
             </button>
           </Link>
           <Link href="images/F25_Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:bg-slate-800 text-white mt-3">
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-200 via-secondary-400 to-tertiary-700 hover:from-primary-100 hover:via-secondary-300 hover:to-tertiary-600 text-white mt-3 transition-all duration-300 hover:brightness-105 hover:saturate-110 hover:drop-shadow-[0_0_15px_rgba(139,92,246,0.35)]">
+                <span className="block bg-[#121212] hover:bg-[#121212] rounded-full px-5 py-2">
                     Download Resume
                 </span>
             </button>
