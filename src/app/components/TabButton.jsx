@@ -16,6 +16,7 @@ const buttonClasses = active ? "text-white" : "text-[#ADB7BE]"
           {children}
         </p>
         <motion.div 
+          initial="default"
           animate={active ? "active" : "default"} 
           variants={variants}
           className="h-1 bg-indigo-500 mt-2 mr-3"

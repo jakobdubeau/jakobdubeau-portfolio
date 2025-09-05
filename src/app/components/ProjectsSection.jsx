@@ -38,7 +38,12 @@ const projectsData = [
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const [shouldAnimate, setShouldAnimate] = useState(false)
+  const isInView = useInView(ref, { 
+    once: false,
+    margin: "-100px 0px -100px 0px" // Trigger animation later when scrolling
+  })
 
   const handleTagChange = (newTag) => {
     setTag(newTag)
@@ -47,6 +52,31 @@ const ProjectsSection = () => {
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   )
+
+  // Handle animation trigger
+  React.useEffect(() => {
+    if (isInView && !hasAnimated) {
+      // First time seeing the section - animate
+      setShouldAnimate(true)
+      setHasAnimated(true)
+    }
+  }, [isInView, hasAnimated])
+
+  // Listen for navbar navigation (when user is scrolled to projects already)
+  React.useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#projects' && hasAnimated) {
+        // Reset and retrigger animation for navbar clicks
+        setShouldAnimate(false)
+        setTimeout(() => {
+          setShouldAnimate(true)
+        }, 100)
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [hasAnimated])
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -81,8 +111,8 @@ const ProjectsSection = () => {
             key={index}
             variants={cardVariants} 
             initial="initial" 
-            animate={isInView ? "animate" : "initial"}
-            transition= {{ duration: 0.3, delay: index * 0.4 }}
+            animate={shouldAnimate ? "animate" : "initial"}
+            transition= {{ duration: 0.5, delay: 0.5 + (index * 0.4) }}
           >
             <ProjectCard 
               key={project.id} 

@@ -19,19 +19,21 @@ const HeroSection = () => {
                 Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <TypeAnimation
-              sequence={[
-                'Jakob',
-                4000, // wait 1s before switching"
-                'a Student',
-                1000,
-                'a Web Developer',
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <span className="inline-block min-w-[280px] text-left">
+              <TypeAnimation
+                sequence={[
+                  'Jakob',
+                  4000,
+                  'a Student',
+                  1000,
+                  'a Web Developer',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
           <p className="text-[#ADB7BE]  text-base sm:text-lg mb-6 lg:text-xl">
             Hi, I&apos;m Jakob. I&apos;m a third year student studying computer science at the University of Ottawa.
