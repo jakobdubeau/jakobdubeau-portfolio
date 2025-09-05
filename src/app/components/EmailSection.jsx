@@ -176,7 +176,7 @@ const EmailSection = () => {
                 </div>
                 <div>
                   <p className="text-green-400 font-medium">Message sent successfully!</p>
-                  <p className="text-green-300/70 text-sm">I'll get back to you soon.</p>
+                  <p className="text-green-300/70 text-sm">I&apos;ll get back to you soon.</p>
                 </div>
               </div>
             )}

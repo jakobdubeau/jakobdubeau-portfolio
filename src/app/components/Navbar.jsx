@@ -54,7 +54,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} closeMenu={() => setNavbarOpen(false)} /> : null}
     </nav>
   )
 }

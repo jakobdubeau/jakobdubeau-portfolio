@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-b-transparent border-l-transparent border-r-transparent text-white">
-      <div className="container p-10 flex justify-between items-center">
+      <div className="w-full px-10 py-10 flex items-center">
         <span>
           JD
         </span>
