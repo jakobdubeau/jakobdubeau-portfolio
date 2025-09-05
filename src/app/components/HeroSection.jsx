@@ -9,9 +9,9 @@ const HeroSection = () => {
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div 
-          initial={{ opacity: 0, scale: 0.7 }} 
-          animate={{ opacity: 1, scale: 1 }} 
-          transition={{ duration: 0.7 }} 
+          initial={{ opacity: 0, y: 30 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.9 }} 
           className="col-span-8 place-self-center text-center sm:text-left"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
@@ -24,9 +24,9 @@ const HeroSection = () => {
                 sequence={[
                   'Jakob',
                   4000,
-                  'a Student',
+                  'a CS Student',
                   1000,
-                  'a Web Developer',
+                  'a Developer',
                   1000,
                 ]}
                 wrapper="span"
