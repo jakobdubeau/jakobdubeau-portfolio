@@ -3,11 +3,11 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-b-transparent border-l-transparent border-r-transparent text-white">
-      <div className="container p-10 flex justify-between">
+      <div className="container p-10 flex justify-between items-center">
         <span>
           JD
         </span>
-        <p className="text-slate-600">
+        <p className="text-slate-600 ml-auto">
           All rights reserved.
         </p>
       </div>

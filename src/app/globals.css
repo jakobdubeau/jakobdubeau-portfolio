@@ -35,3 +35,8 @@ body {
     text-wrap: balance;
   }
 }
+
+input::placeholder, textarea::placeholder {
+  opacity: var(--placeholder-opacity, 1);
+  transition: opacity 200ms ease;
+}

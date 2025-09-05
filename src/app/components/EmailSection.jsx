@@ -10,6 +10,8 @@ const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [isSuccessFading, setIsSuccessFading] = useState(false)
+  const [placeholderOpacity, setPlaceholderOpacity] = useState(100)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -33,7 +35,35 @@ const EmailSection = () => {
 
       if (response.ok) {
         setEmailSubmitted(true)
+        setIsSuccessFading(false)
+        
+        // Show success message with pulse and fade placeholders
+        setPlaceholderOpacity(10)
+        
+        // Reset form immediately (no values showing)
         e.target.reset()
+        
+        // Gradually fade back to full opacity over 2 seconds
+        const steps = 20
+        const increment = 90 / steps // from 10 to 100
+        const stepDelay = 100 // 100ms per step = 2 seconds total
+        
+        for (let i = 1; i <= steps; i++) {
+          setTimeout(() => {
+            setPlaceholderOpacity(10 + (increment * i))
+          }, stepDelay * i)
+        }
+        
+        // Start fade-out after 6 seconds
+        setTimeout(() => {
+          setIsSuccessFading(true)
+        }, 6000)
+        
+        // Remove after fade animation completes
+        setTimeout(() => {
+          setEmailSubmitted(false)
+          setIsSuccessFading(false)
+        }, 7600)
       } else {
         const errorData = await response.json()
         setError(errorData.error?.message || 'Failed to send email. Please try again.')
@@ -78,7 +108,10 @@ const EmailSection = () => {
               type="email" 
               id="email" 
               required 
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 transition-all duration-200"
+              style={{ 
+                '--placeholder-opacity': placeholderOpacity / 100
+              }}
               placeholder="email@domain.com"
             />
           </div>
@@ -95,7 +128,10 @@ const EmailSection = () => {
               type="text" 
               id="subject" 
               required 
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 transition-all duration-200"
+              style={{ 
+                '--placeholder-opacity': placeholderOpacity / 100
+              }}
               placeholder="Just saying hi!"
             />
           </div>
@@ -109,7 +145,10 @@ const EmailSection = () => {
             <textarea
               name="message"
               id="message"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 transition-all duration-200"
+              style={{ 
+                '--placeholder-opacity': placeholderOpacity / 100
+              }}
               placeholder="Leave your message here"
             />
           </div>
@@ -120,13 +159,28 @@ const EmailSection = () => {
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
-          {
-            emailSubmitted && (
-              <p className="text-green-500 text-sm mt-2">
-                Email sent successfully!
-              </p>
-            )
-          }
+          <div className="mt-4 h-16">
+            {emailSubmitted && (
+              <div className={`p-4 bg-green-900/20 border border-green-500/30 rounded-lg flex items-center space-x-3 h-full ${
+                isSuccessFading 
+                  ? 'opacity-0 transition-opacity duration-[1500ms] ease-out' 
+                  : 'opacity-100'
+              }`}
+              style={{
+                animation: isSuccessFading ? 'none' : 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 2'
+              }}>
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-green-400 font-medium">Message sent successfully!</p>
+                  <p className="text-green-300/70 text-sm">I'll get back to you soon.</p>
+                </div>
+              </div>
+            )}
+          </div>
           {
             error && (
               <p className="text-red-500 text-sm mt-2">
