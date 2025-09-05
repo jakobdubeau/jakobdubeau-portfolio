@@ -20,7 +20,7 @@ const navLinks = [
     }
 ]
 
-const Navbar = () => {
+const Navbar = ({ snowEnabled, setSnowEnabled }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -51,6 +51,45 @@ const Navbar = () => {
                 </li>
               ))
             }
+            <li className="flex items-center">
+              <button 
+                onClick={() => setSnowEnabled(!snowEnabled)}
+                className="cursor-pointer group"
+              >
+                <div className={`
+                  w-6 h-6 rounded border-2 bg-black
+                  flex items-center justify-center
+                  transition-all duration-300
+                  hover:border-white
+                  ${snowEnabled ? 'border-white' : 'border-[#ADB7BE]'}
+                `}>
+                  {/* Snowflake icon - 7x7 grid with your positions */}
+                  <div className="relative w-[14px] h-[14px]">
+                    {[4, 9, 11, 13, 17, 19, 22, 23, 25, 27, 28, 31, 33, 37, 39, 41, 46].map((position, index) => {
+                      // Convert position number to row,col in 7x7 grid (positions 1-49)
+                      const row = Math.ceil(position / 7);
+                      const col = position - (row - 1) * 7;
+                      return (
+                      <div
+                        key={index}
+                        className={`
+                          absolute
+                          transition-colors duration-300
+                          ${snowEnabled ? 'bg-white' : 'bg-gray-500 group-hover:bg-white'}
+                        `}
+                        style={{
+                          width: '2px',
+                          height: '2px',
+                          left: `${(col - 1) * 2}px`,
+                          top: `${(row - 1) * 2}px`,
+                        }}
+                      />
+                      );
+                    })}
+                  </div>
+                </div>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
