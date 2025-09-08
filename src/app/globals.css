@@ -40,3 +40,8 @@ input::placeholder, textarea::placeholder {
   opacity: var(--placeholder-opacity, 1);
   transition: opacity 200ms ease;
 }
+
+@keyframes customPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

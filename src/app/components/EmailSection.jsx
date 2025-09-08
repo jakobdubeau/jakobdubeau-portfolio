@@ -167,7 +167,7 @@ const EmailSection = () => {
                   : 'opacity-100'
               }`}
               style={{
-                animation: isSuccessFading ? 'none' : 'pulse 2s ease-in-out 2'
+                animation: isSuccessFading ? 'none' : 'customPulse 2s ease-in-out 2'
               }}>
                 <div className="flex-shrink-0">
                   <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
