@@ -104,7 +104,12 @@ const Navbar = ({ snowEnabled, setSnowEnabled }) => {
         </div>
       </div>
       {navbarOpen ? (
-        <MenuOverlay links={navLinks} closeMenu={() => setNavbarOpen(false)} />
+        <MenuOverlay 
+          links={navLinks} 
+          closeMenu={() => setNavbarOpen(false)}
+          snowEnabled={snowEnabled}
+          setSnowEnabled={setSnowEnabled}
+        />
       ) : null}
     </nav>
   );
