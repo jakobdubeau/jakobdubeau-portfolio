@@ -19,7 +19,7 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br></br>
-            <span className="inline-block min-w-[280px] text-left">
+            <span className="inline-block min-w-[280px] text-center sm:text-left">
               <TypeAnimation
                 sequence={[
                   "Jakob",
