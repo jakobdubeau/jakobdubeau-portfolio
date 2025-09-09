@@ -7,7 +7,8 @@ const NavLink = ({ href, title }) => {
 
     if (targetElement) {
       const navbarHeight = 100;
-      const targetPosition = targetElement.offsetTop - navbarHeight;
+      const additionalOffset = 100; // Extra space below navbar
+      const targetPosition = targetElement.offsetTop - navbarHeight + additionalOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
       const duration = 1000; // 1 second animation
