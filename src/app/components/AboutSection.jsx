@@ -64,7 +64,7 @@ const AboutSection = () => {
           </div>
           <div className="flex items-center gap-3">
             <span className="text-secondary-400 text-sm font-bold">›</span>
-            <span className="text-white text-sm">i've had way too many hobbies to count</span>
+            <span className="text-white text-sm">i&apos;ve had way too many hobbies to count</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-primary-300 text-sm font-bold">›</span>
