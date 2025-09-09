@@ -78,21 +78,17 @@ const AboutSection = () => {
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     exit={{ opacity: 0, scale: 0.8, x: 10 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-full ml-3 top-1/2 -translate-y-1/2 z-50"
+                    className="absolute left-full ml-3 top-0 z-50"
                   >
                     {/* Chat bubble with tail */}
-                    <div className="relative bg-[#1f1f1f] border border-[#404040]/50 rounded-lg shadow-xl p-2 w-[250px]">
-                      {/* Left pointing triangle tail - centered with image */}
-                      <div className="absolute right-full top-1/2 -translate-y-1/2 border-8 border-transparent border-r-[#1f1f1f]"></div>
-                      <div className="absolute right-full top-1/2 -translate-y-1/2 translate-x-px border-8 border-transparent border-r-[#404040]"></div>
-                      
-                      <div className="flex justify-end mb-1">
+                    <div className="relative w-[200px] h-[200px] border border-white/20 rounded-xl overflow-hidden shadow-2xl">
+                      <div className="absolute top-3 left-3 z-10">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             setShowHeraImage(false);
                           }}
-                          className="w-4 h-4 text-gray-500 hover:text-white transition-colors text-xs font-bold"
+                          className="w-6 h-6 text-white/90 hover:text-white transition-all duration-200 text-sm font-bold bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center backdrop-blur-sm"
                         >
                           ✕
                         </button>
@@ -100,9 +96,9 @@ const AboutSection = () => {
                       <Image
                         src="/images/Hera3.jpg"
                         alt="Hera the cat"
-                        width={250}
-                        height={250}
-                        className="rounded"
+                        width={200}
+                        height={200}
+                        className=""
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     </div>
