@@ -60,11 +60,11 @@ const AboutSection = () => {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <span className="text-primary-400 text-sm font-bold">›</span>
-            <span className="text-white text-sm">likes games, gym, music, anime, and physical media</span>
+            <span className="text-white text-sm">likes games, gym, music</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-secondary-400 text-sm font-bold">›</span>
-            <span className="text-white text-sm">i&apos;ve had way too many hobbies to count</span>
+            <span className="text-white text-sm">i&apos;ve had way too many hobbies to list</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-primary-300 text-sm font-bold">›</span>
