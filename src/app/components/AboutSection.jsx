@@ -25,8 +25,7 @@ const AboutSection = () => {
             "HTML/CSS",
             "React",
             "Tailwind",
-            "Node.js",
-            "Git"
+            "Next.js",
           ].map((skill, index) => (
             <span
               key={index}
@@ -60,11 +59,11 @@ const AboutSection = () => {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <span className="text-primary-400 text-sm font-bold">›</span>
-            <span className="text-white text-sm">likes games, gym, music, anime, and physical media</span>
+            <span className="text-white text-sm">likes games, gym, music</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-secondary-400 text-sm font-bold">›</span>
-            <span className="text-white text-sm">i&apos;ve had way too many hobbies to count</span>
+            <span className="text-white text-sm">always trying to learn new things</span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-primary-300 text-sm font-bold">›</span>
@@ -82,7 +81,7 @@ const AboutSection = () => {
                   >
                     {/* Chat bubble with tail */}
                     <div className="relative w-[200px] h-[200px] border border-white/20 rounded-xl overflow-hidden shadow-2xl">
-                      <div className="absolute top-3 left-3 z-10">
+                      <div className="absolute top-3 right-3 z-10">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -94,8 +93,8 @@ const AboutSection = () => {
                         </button>
                       </div>
                       <Image
-                        src="/images/Hera3.jpg"
-                        alt="Hera the cat"
+                        src="/images/Hera4.jpg"
+                        alt="Hera"
                         width={200}
                         height={200}
                         className=""
